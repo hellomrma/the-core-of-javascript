@@ -14,7 +14,7 @@
         - 문장은 세미콜론으로 종료
 ---
 - 키워드와 예약어
-    - break, do typeof 등은 키워드
+    - break, do, typeof 등은 키워드
     - enum, int, short 등은 예약어 (스트릭트 모드에서는 일반 모드에서 left, yield 등의 예약어가 추가됨)
 ---
 - 변수
@@ -118,3 +118,39 @@
         ```
     - 할당 연산자  
         - 값을 변수에 할당
+        ```javascript
+        var num = 10;
+        num = num + 10;
+        ```
+        - 곱셈 후 할당 (*=), 나눗셈 후 할당 (/=), 나머지 할당 (%=), 덧셈 후 할당 (+=), 뺄셈 후 할당 (-=)
+    - 쉼표 연산자
+        - 여러 문장을 한 문장으로 합칠 때 씀
+        ```javascript
+        var num1=1, num2=2, num3=3
+        ```
+        - 아래와 같이 쓰면 표현식의 마지막 값을 반환 (아래 예제에서는 0을 반환)
+        ```javascript
+        var num = (5,1,4,8,0)
+        ```
+---
+- 문장
+    - if 문
+    ```javascript
+    if (condition) {
+        statement1
+    } else {
+        statement2
+    }
+    ```
+    - do-while 문  
+        - 평가전 루프 (종료 조건을 평가하기 전에 최소 한 번은 반드시 실행)
+    ```javascript
+    do {
+        statement
+    } while (expression);
+    ``` 
+    - while 문
+        - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
+    ```javascript
+    while(expression) statement
+    ```
