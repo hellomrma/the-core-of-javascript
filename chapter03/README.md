@@ -60,9 +60,13 @@
             - toString(매개변수) - 진법을 나타낼 수 있음. 기본 10진법
     - 객체 타입
         - 객체는 new 연산자 다음에 새로 만들 객체 타입의 이름을 써서 만듬  
-        : var o = new Object();
+        ```javascript
+        var o = new Object();
+        ```
         - ECMAScript에서는 생성자에 매개변수를 넘기지 않는다면 괄호를 생략해도 됨  
-        : var o = new Object;
+        ```javascript
+        var o = new Object;
+        ```
         - Object의 인스턴스는 다음 프로퍼티와 메서드를 가짐
             - constructor  
             : 해당 객체를 만드는 데 쓰인 함수
@@ -106,7 +110,9 @@
     - 불일치 연산자
         - 사용 : !==
         - 피연산자의 타입을 변환하지 않고 있는 그대로 비교
-
-    
-
-
+    - 3항 연산자  
+        ```javascript  
+        variable = boolean_expression ? true_value : false_value
+        ```
+    - 할당 연산자  
+        - 값을 변수에 할당
