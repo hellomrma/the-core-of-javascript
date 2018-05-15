@@ -138,8 +138,18 @@
     ```javascript
     if (condition) {
         statement1
-    } else {
+    } else if (condition2) {
         statement2
+    } else {
+        statement3
+    }
+
+    if (i>25) {
+        alert("Greater than 25");
+    } else if (i<0) {
+        alert("Less than 0");
+    } else {
+        alert("Between 0 and 25, inclusive");
     }
     ```
     - do-while 문  
@@ -148,9 +158,28 @@
     do {
         statement
     } while (expression);
+
+    var i=0;
+    do {
+        i+=2;
+    } while (i<10);
     ``` 
     - while 문
         - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
     ```javascript
     while(expression) statement
+
+    while (i<10) {
+        i+=2;
+    }
+    ```
+    - for 문
+        - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
+    ```javascript
+    for (initialization; expression; post-loop-expression) statement
+
+    var count = 10;
+    for (var i=0; i<count; i++) {
+        alert(i);
+    }
     ```
