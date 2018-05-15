@@ -134,7 +134,7 @@
 ---
 - 문장
     - if 문
-        - condition의 결과에 Boolean() 함수를 호출해 불리얼 값으로 바꿈
+        - condition의 결과에 Boolean() 함수를 호출해 불리언 값으로 바꿈
     ```javascript
     if (condition) {
         statement1
