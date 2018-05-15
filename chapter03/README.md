@@ -143,7 +143,8 @@
     } else {
         statement3
     }
-
+    ```
+    ```javascript
     if (i>25) {
         alert("Greater than 25");
     } else if (i<0) {
@@ -158,7 +159,8 @@
     do {
         statement
     } while (expression);
-
+    ```
+    ```javascript
     var i=0;
     do {
         i+=2;
@@ -168,7 +170,8 @@
         - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
     ```javascript
     while(expression) statement
-
+    ```
+    ```javascript
     while (i<10) {
         i+=2;
     }
@@ -177,7 +180,8 @@
         - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
     ```javascript
     for (initialization; expression; post-loop-expression) statement
-
+    ```
+    ```javascript
     var count = 10;
     for (var i=0; i<count; i++) {
         alert(i);
