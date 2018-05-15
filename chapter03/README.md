@@ -84,7 +84,9 @@
         - 논리 NOT : 느낌표(!) 
         - 논리 AND : 앰퍼센드 2개(&&)
         - 논리 OR : 파이프 2개(||)  
-        : var myObject = preferredObject || backupObject;
+        ```javascript
+        var myObject = preferredObject || backupObject;
+        ```
     - 곱셈 관련 연산자
         - 곱셈 : 아스테리스크(*)
         - 나눗셈 : 슬래시(/)
