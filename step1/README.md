@@ -147,9 +147,9 @@
     }
     ```
     ```javascript
-    if (i>25) {
+    if (i > 25) {
         alert("Greater than 25");
-    } else if (i<0) {
+    } else if (i < 0) {
         alert("Less than 0");
     } else {
         alert("Between 0 and 25, inclusive");
@@ -166,7 +166,7 @@
     var i=0;
     do {
         i+=2;
-    } while (i<10);
+    } while (i < 10);
     ``` 
     - while 문  
     평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
@@ -174,7 +174,7 @@
     while(expression) statement
     ```
     ```javascript
-    while (i<10) {
+    while (i < 10) {
         i+=2;
     }
     ```
@@ -185,7 +185,7 @@
     ```
     ```javascript
     var count = 10;
-    for (var i=0; i<count; i++) {
+    for (var i = 0; i < count; i++) {
         alert(i);
     }
     ```
@@ -207,7 +207,7 @@
     label: statement
     ```
     ```javascript
-    start: for (var i=0; i<count; i++) {
+    start: for (var i = 0; i < count; i++) {
         alert(i);
     }
     ```
@@ -217,11 +217,67 @@
     continue 문은 루프를 즉시 빠져나가긴 하지만 루프 실행을 계속 됨  
     ```javascript
     var num=0;
-    for (var i=1; i<10; i++) {
-        if (i%5 == 0) {
+    for (var i = 1; i < 10; i++) {
+        if (i % 5 == 0) {
             break;
         }
         num++
     }
-    alert(num);
+    alert(num); // 8
+    ```
+    ```javascript
+    var num=0;
+    for (var i = 1; i < 10; i++) {
+        if (i % 5 == 0) {
+            continue;
+        }
+        num++
+    }
+    alert(num); // 55
+    ```
+    - with 문  
+    코드의 스코프(실행 범위)를 특정 객체에 고정함  
+    스트릭트 모드에서는 with 문을 금지하고 문법 에러로 간주함  
+    우선 지역 변수에서 식별자로 찾고 없다면 location 객체의 프로퍼티 중에서 같은 이름으로 검색  
+    with 문은 성능에 악영향이 있고 디버깅하기도 어려우므로 쓰지 않는게 좋음
+    ```javascript
+    with (expression) statement;
+    ```
+    ```javascript
+    var qs = location.search.substring(1);
+    var hostName = location.hostname;
+    var url = location.href;
+    ```
+    ```javascript
+    with(location) {
+        var qs = search.substring(1);
+        var hostName = hostname;
+        var url = href;
+    }
+    ```
+    - switch 문  
+    if 문과 관련이 깊음  
+    switch 문의 각 case는 '표현식이 value와 일치하면 statement를 실행하라'는 의미  
+    모든 데이터 타입에서 동작하므로 문자열과 객체에서도 사용할 수 있음  
+    일치 연산자(===)로 값을 비교하므로 타입 변환은 일어나지 않음. 문자와 숫자를 서로 다른 것으로 간주
+    ```javascript
+    switch (expression) {
+        case value: statement
+            break;
+        case value: statement
+            break;
+        default: statement
+    }
+    ```
+    ```javascript
+    switch (i) {
+        case 25:
+            alert("25");
+            break;
+        case 35:
+            alert("35");
+            break;
+        default:
+            alert("Other");
+    }
     ```
