@@ -281,3 +281,19 @@
             alert("Other");
     }
     ```
+---
+- 함수  
+함수는 function 키워드로 정의하며 그 뒤에 매개변수와 함수 본문을 순서대로 씀
+    ```javascript
+    function functionName(arg0, arg1,...,argN) {
+        statements
+    }
+    ```
+    - 함수는 return 문을 만나는 즉시 실행을 멈추고 빠져나옴
+    - return 문 뒤에 반환 값을 쓰지 않으면 즉시 실행을 멈추고 undefined 값을 반환함
+    ```javascript
+    function sayHi(name, message) {
+        return;
+        alert("Hello " + name + ", " + message); // 호출되지 않음
+    }
+    ```
