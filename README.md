@@ -1,1 +1,1 @@
-# the core of javascript
+# javascript study.

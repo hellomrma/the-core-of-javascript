@@ -1,8 +1,10 @@
+# 기초
+
 - 문법  
     - 대소문자 구분  
     - 식별자  
         - 첫 번째 문자는 반드시 글자나 밑줄(_), 달러 기호($) 중 하나
-        - ECMAScript의 내장 함수와 객체가 카멜 케이스로 표기되어 있음
+        - ECMAScript의 내장 함수와 객체가 카멜 케이스로 표기되어 있음. 그러므로 카멜 케이스로 쓰는걸 권장
     - 주석
         - 한 줄 주석 //
         - 블록 주석 /* ***** */
@@ -57,20 +59,20 @@
             - 값을 문자열로 바꾸는 방법은 두가지
             - toString()
             - toString(매개변수) - 진법을 나타낼 수 있음. 기본 10진법
-    - 객체 타입
-        - 객체는 new 연산자 다음에 새로 만들 객체 타입의 이름을 써서 만듬  
-        ```javascript
-        var o = new Object();
-        ```
-        - ECMAScript에서는 생성자에 매개변수를 넘기지 않는다면 괄호를 생략해도 됨  
-        ```javascript
-        var o = new Object;
-        ```
-        - Object의 인스턴스는 다음 프로퍼티와 메서드를 가짐
-            - constructor  
-            : 해당 객체를 만드는 데 쓰인 함수
-            - hasOwnProperty(propertyName)  
-            : 해당 프로퍼티가 객제 인스턴스에 고유하며 프로토타입에서 상속하지 않았음을 확인
+    - 객체 타입  
+    객체는 new 연산자 다음에 새로 만들 객체 타입의 이름을 써서 만듬  
+    ```javascript
+    var o = new Object();
+    ```
+    - ECMAScript에서는 생성자에 매개변수를 넘기지 않는다면 괄호를 생략해도 됨  
+    ```javascript
+    var o = new Object;
+    ```
+    - Object의 인스턴스는 다음 프로퍼티와 메서드를 가짐
+        - constructor  
+        : 해당 객체를 만드는 데 쓰인 함수
+        - hasOwnProperty(propertyName)  
+        : 해당 프로퍼티가 객제 인스턴스에 고유하며 프로토타입에서 상속하지 않았음을 확인
 ---
 - 연산자  
     - 계산 연산자, 비트 연산자, 관계 연산자, 일치 연산자 등
@@ -112,29 +114,29 @@
         - 사용 : !==
         - 피연산자의 타입을 변환하지 않고 있는 그대로 비교
     - 3항 연산자  
-        ```javascript  
-        variable = boolean_expression ? true_value : false_value
-        ```
+    ```javascript  
+    variable = boolean_expression ? true_value : false_value
+    ```
     - 할당 연산자  
-        - 값을 변수에 할당
-        ```javascript
-        var num = 10;
-        num = num + 10;
-        ```
-        - 곱셈 후 할당 (*=), 나눗셈 후 할당 (/=), 나머지 할당 (%=), 덧셈 후 할당 (+=), 뺄셈 후 할당 (-=)
-    - 쉼표 연산자
-        - 여러 문장을 한 문장으로 합칠 때 씀
-        ```javascript
-        var num1=1, num2=2, num3=3
-        ```
-        - 아래와 같이 쓰면 표현식의 마지막 값을 반환 (아래 예제에서는 0을 반환)
-        ```javascript
-        var num = (5,1,4,8,0)
-        ```
+    값을 변수에 할당
+    ```javascript
+    var num = 10;
+    num = num + 10;
+    ```
+    - 곱셈 후 할당 (*=), 나눗셈 후 할당 (/=), 나머지 할당 (%=), 덧셈 후 할당 (+=), 뺄셈 후 할당 (-=)
+    - 쉼표 연산자  
+    여러 문장을 한 문장으로 합칠 때 씀
+    ```javascript
+    var num1=1, num2=2, num3=3
+    ```
+    - 아래와 같이 쓰면 표현식의 마지막 값을 반환 (아래 예제에서는 0을 반환)
+    ```javascript
+    var num = (5,1,4,8,0)
+    ```
 ---
 - 문장
-    - if 문
-        - condition의 결과에 Boolean() 함수를 호출해 불리언 값으로 바꿈
+    - if 문  
+    condition의 결과에 Boolean() 함수를 호출해 불리언 값으로 바꿈
     ```javascript
     if (condition) {
         statement1
@@ -154,7 +156,7 @@
     }
     ```
     - do-while 문  
-        - 평가전 루프 (종료 조건을 평가하기 전에 최소 한 번은 반드시 실행)
+    평가전 루프 (종료 조건을 평가하기 전에 최소 한 번은 반드시 실행)
     ```javascript
     do {
         statement
@@ -166,8 +168,8 @@
         i+=2;
     } while (i<10);
     ``` 
-    - while 문
-        - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
+    - while 문  
+    평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
     ```javascript
     while(expression) statement
     ```
@@ -176,8 +178,8 @@
         i+=2;
     }
     ```
-    - for 문
-        - 평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
+    - for 문  
+    평가후 루프 (루프 본문을 실행하기 전에 종료 조건을 평가함)
     ```javascript
     for (initialization; expression; post-loop-expression) statement
     ```
