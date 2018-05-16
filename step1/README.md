@@ -189,3 +189,39 @@
         alert(i);
     }
     ```
+    - for-in 문  
+    엄격한 반복문. 객체의 프로퍼티를 나열하는 데 사용함
+    ```javascript
+    for (property inexpression) statement
+    ```
+    ```javascript
+    for (var propName in window) {
+        document.write(propName);
+    }
+    ```
+    - 문장 레이블  
+    문장에 레이블을 붙였다가 나중에 사용할 수 있음  
+    나중에 break나 continue 문에서 참조할 수 있음  
+    중첩된 루프에서 사용함
+    ```javascript
+    label: statement
+    ```
+    ```javascript
+    start: for (var i=0; i<count; i++) {
+        alert(i);
+    }
+    ```
+    - break 문과 continue 문  
+    루프 내부의 코드 실행을 세밀히 조절할 수 있음  
+    break 문은 즉시 루프에서 빠져나감  
+    continue 문은 루프를 즉시 빠져나가긴 하지만 루프 실행을 계속 됨  
+    ```javascript
+    var num=0;
+    for (var i=1; i<10; i++) {
+        if (i%5 == 0) {
+            break;
+        }
+        num++
+    }
+    alert(num);
+    ```
